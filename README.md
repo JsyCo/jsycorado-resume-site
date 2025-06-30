@@ -18,7 +18,7 @@ The site is fully responsive and easy to navigate, making it accessible on any d
 
 ## Live Site
 
-👉 [View the live website here](https://jsycorado.github.io/)
+👉 [View the live website here](https://jsyco.github.io/jsycorado-resume-site/)
 
 ## How to Use
 
