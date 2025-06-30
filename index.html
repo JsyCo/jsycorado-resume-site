@@ -17,16 +17,16 @@
             <a href="tel:3238349177">(323) 834-9177</a> |
             <a href="https://www.linkedin.com/in/jsycor/" target="_blank">LinkedIn</a>
         </p>
-        <!-- Navigation Buttons -->
-        <div class="section-nav">
-            <button class="nav-btn" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'});">About Me</button>
-            <button class="nav-btn" onclick="document.getElementById('skills').scrollIntoView({behavior:'smooth'});">Skills</button>
-            <button class="nav-btn" onclick="document.getElementById('certificates').scrollIntoView({behavior:'smooth'});">Certificates</button>
-            <button class="nav-btn" onclick="document.getElementById('education').scrollIntoView({behavior:'smooth'});">Education</button>
-            <button class="nav-btn" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'});">Projects</button>
-            <button class="nav-btn" onclick="document.getElementById('experience').scrollIntoView({behavior:'smooth'});">Experience</button>
-            <button class="nav-btn" onclick="document.getElementById('leadership').scrollIntoView({behavior:'smooth'});">Leadership</button>
-        </div>
+        <!-- Section Nav Links -->
+        <nav class="section-nav">
+            <a href="#about" class="nav-link">About Me</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#certificates" class="nav-link">Certificates</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#leadership" class="nav-link">Leadership</a>
+        </nav>
     </header>
     <main>
         <!-- About Me -->
@@ -36,9 +36,6 @@
                 <p>
                     I am an enthusiastic IT and cybersecurity student passionate about technology and problem-solving. I aim to begin my career in IT support—fixing computers, printers, and tech issues—before transitioning into cybersecurity. Years of helping friends and family troubleshoot devices and build custom PCs have given me hands-on confidence and joy in technical support. I am committed to lifelong learning, earning certifications, and staying ahead in technology.
                 </p>
-            </div>
-            <div class="section-img-box">
-                <!-- Optional: Place a section image here or leave empty -->
             </div>
         </section>
 
@@ -55,21 +52,22 @@
                     <li>Languages: English, Spanish</li>
                 </ul>
             </div>
-            <div class="section-img-box"></div>
         </section>
 
         <!-- Certificates -->
         <section id="certificates" class="section-row">
             <div class="section-content">
                 <h2>Certificates</h2>
-                <h3>CompTIA A+ (Expected 2025)</h3>
-                <ul>
-                    <li>Foundation in hardware, networking, OS, and troubleshooting</li>
-                    <li>Security best practices and real-world scenario problem-solving</li>
-                </ul>
-            </div>
-            <div class="section-img-box">
-                <img src="images/comptia-a-plus.png" alt="CompTIA A+ badge" class="section-img">
+                <div class="item-row">
+                    <div class="item-text">
+                        <h3>CompTIA A+ <span class="item-date">(Expected 2025)</span></h3>
+                        <ul>
+                            <li>Foundation in hardware, networking, OS, and troubleshooting</li>
+                            <li>Security best practices and real-world scenario problem-solving</li>
+                        </ul>
+                    </div>
+                    <img src="images/comptia-a-plus.png" alt="CompTIA A+ badge" class="adapt-img square-img">
+                </div>
             </div>
         </section>
 
@@ -77,14 +75,20 @@
         <section id="education" class="section-row">
             <div class="section-content">
                 <h2>Education</h2>
-                <h3>California State University, Long Beach</h3>
-                <p>B.S. in Engineering: Computer Science (Minor: Cyber Security Applications) | 2021–2025</p>
-                <h3>Los Angeles Harbor College</h3>
-                <p>A.S. in Math & Natural Sciences, A.A. in Liberal Arts | 2018–2021</p>
-            </div>
-            <div class="section-img-box">
-                <img src="images/csulb-logo.png" alt="CSU Long Beach logo" class="section-img">
-                <img src="images/lahc-logo.png" alt="Los Angeles Harbor College logo" class="section-img">
+                <div class="item-row">
+                    <div class="item-text">
+                        <h3>California State University, Long Beach</h3>
+                        <p>B.S. in Engineering: Computer Science (Minor: Cyber Security Applications) <span class="item-date">2021–2025</span></p>
+                    </div>
+                    <img src="images/csulb-logo.png" alt="CSU Long Beach logo" class="adapt-img square-img">
+                </div>
+                <div class="item-row">
+                    <div class="item-text">
+                        <h3>Los Angeles Harbor College</h3>
+                        <p>A.S. in Math & Natural Sciences, A.A. in Liberal Arts <span class="item-date">2018–2021</span></p>
+                    </div>
+                    <img src="images/lahc-logo.png" alt="Los Angeles Harbor College logo" class="adapt-img square-img">
+                </div>
             </div>
         </section>
 
@@ -92,36 +96,65 @@
         <section id="projects" class="section-row">
             <div class="section-content">
                 <h2>Projects & Competitions</h2>
-                <h3>Digital Forensics: Hidden Image Project (2024)</h3>
-                <ul>
-                    <li>Investigated a simulated hard drive to uncover hidden images using Autopsy</li>
-                    <li>Practiced digital evidence handling and steganography detection</li>
-                </ul>
-                <h3>PlayDay Android App (2022–2023)</h3>
-                <ul>
-                    <li>Co-developed a geolocation game app for parents and kids</li>
-                    <li>Implemented safety radius and Google Maps features</li>
-                </ul>
-            </div>
-            <div class="section-img-box">
-                <img src="images/forensics-project-banner.jpg" alt="Forensics Project Banner" class="banner-img">
-                <img src="images/playday-app-banner.png" alt="PlayDay App Banner" class="banner-img">
+                <div class="item-row">
+                    <div class="item-text">
+                        <h3>Digital Forensics: Hidden Image Project <span class="item-date">(2024)</span></h3>
+                        <ul>
+                            <li>Investigated a simulated hard drive to uncover hidden images using Autopsy</li>
+                            <li>Practiced digital evidence handling and steganography detection</li>
+                        </ul>
+                    </div>
+                    <img src="images/forensics-project-banner.jpg" alt="Forensics Project Banner" class="adapt-img banner-img">
+                </div>
+                <div class="item-row">
+                    <div class="item-text">
+                        <h3>PlayDay Android App <span class="item-date">(2022–2023)</span></h3>
+                        <ul>
+                            <li>Co-developed a geolocation game app for parents and kids</li>
+                            <li>Implemented safety radius and Google Maps features</li>
+                        </ul>
+                    </div>
+                    <img src="images/playday-app-banner.png" alt="PlayDay App Banner" class="adapt-img banner-img">
+                </div>
+                <div class="item-row">
+                    <div class="item-text">
+                        <h3>Cybersecurity eCitadel Competition <span class="item-date">(2023)</span></h3>
+                        <ul>
+                            <li>Secured compromised virtual machines running Windows and Linux under timed conditions</li>
+                            <li>Removed malware, applied security configurations, and managed user permissions</li>
+                        </ul>
+                    </div>
+                    <img src="images/ecitadel-logo.png" alt="eCitadel Competition Logo" class="adapt-img square-img">
+                </div>
+                <div class="item-row">
+                    <div class="item-text">
+                        <h3>CyberPatriot Competition – Platinum Tier <span class="item-date">(2018)</span></h3>
+                        <ul>
+                            <li>Participated as a core team member in the national CyberPatriot cybersecurity competition</li>
+                            <li>Tasked with securing enterprise environments using Windows and Linux systems</li>
+                            <li>Achieved Platinum Tier standing for outstanding performance</li>
+                        </ul>
+                    </div>
+                    <img src="images/cyberpatriot-logo.png" alt="CyberPatriot Logo" class="adapt-img square-img">
+                </div>
             </div>
         </section>
 
-        <!-- Experience -->
+        <!-- Professional Experience -->
         <section id="experience" class="section-row">
             <div class="section-content">
                 <h2>Professional Experience</h2>
-                <h3>JCPenney – Cashier Associate (2024–Present)</h3>
-                <ul>
-                    <li>Delivered customer service, resolved tech issues at POS terminals, and supported store operations</li>
-                    <li>Trained new staff and improved team workflow</li>
-                    <li>Gained confidence in troubleshooting, communication, and adaptability</li>
-                </ul>
-            </div>
-            <div class="section-img-box">
-                <img src="images/jcpenney-logo.png" alt="JCPenney logo" class="section-img">
+                <div class="item-row">
+                    <div class="item-text">
+                        <h3>JCPenney – Cashier Associate <span class="item-date">(2024–Present)</span></h3>
+                        <ul>
+                            <li>Delivered customer service, resolved tech issues at POS terminals, and supported store operations</li>
+                            <li>Trained new staff and improved team workflow</li>
+                            <li>Gained confidence in troubleshooting, communication, and adaptability</li>
+                        </ul>
+                    </div>
+                    <img src="images/jcpenney-logo.png" alt="JCPenney logo" class="adapt-img square-img">
+                </div>
             </div>
         </section>
 
@@ -129,19 +162,37 @@
         <section id="leadership" class="section-row">
             <div class="section-content">
                 <h2>Leadership & Activities</h2>
-                <h3>Students Run LA – Volunteer/Runner</h3>
-                <ul>
-                    <li>Organized and led marathon practices, ensured team safety, and motivated participants</li>
-                    <li>Developed leadership, communication, and event coordination skills</li>
-                </ul>
-            </div>
-            <div class="section-img-box">
-                <img src="images/srla-photo.jpg" alt="SRLA Event Photo" class="banner-img">
+                <div class="item-row">
+                    <div class="item-text">
+                        <h3>Students Run LA – Volunteer/Runner <span class="item-date">(2017–2018)</span></h3>
+                        <ul>
+                            <li>Organized and led marathon practices, ensured team safety, and motivated participants</li>
+                            <li>Developed leadership, communication, and event coordination skills</li>
+                        </ul>
+                    </div>
+                    <img src="images/srla-photo.jpg" alt="SRLA Event Photo" class="adapt-img banner-img">
+                </div>
             </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2025 Jsy Jared Corado</p>
     </footer>
+    <!-- Scroll to top button -->
+    <button id="scrollTopBtn" title="Back to top">&#8679;</button>
+    <script>
+      // Show/hide scroll button
+      const scrollBtn = document.getElementById('scrollTopBtn');
+      window.onscroll = function() {
+        if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
+          scrollBtn.style.display = "block";
+        } else {
+          scrollBtn.style.display = "none";
+        }
+      };
+      scrollBtn.onclick = function() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+      };
+    </script>
 </body>
 </html>
