@@ -3,218 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jsy Jared Corado - Resume</title>
+    <title>Jsy Jared Corado - Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header with profile image -->
+    <!-- Header -->
     <header>
-        <img src="images/profile.jpg" alt="Jsy Jared Corado profile photo" class="profile-img" width="140" height="140" style="border-radius:50%;object-fit:cover;margin-bottom:1rem;">
+        <img src="images/profile.jpg" alt="Jsy Jared Corado profile photo" class="profile-img">
         <h1>Jsy Jared Corado</h1>
-        <p>Carson, California 90745-8319</p>
         <p>
+            Carson, California |
             <a href="mailto:jsycorado@gmail.com">jsycorado@gmail.com</a> |
-            <a href="tel:3236759017">323-675-9017</a> |
-            <a href="https://www.linkedin.com/in/jsycor/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="tel:3238349177">(323) 834-9177</a> |
+            <a href="https://www.linkedin.com/in/jsycor/" target="_blank">LinkedIn</a>
         </p>
+        <!-- Navigation Buttons -->
+        <div class="section-nav">
+            <button class="nav-btn" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'});">About Me</button>
+            <button class="nav-btn" onclick="document.getElementById('skills').scrollIntoView({behavior:'smooth'});">Skills</button>
+            <button class="nav-btn" onclick="document.getElementById('certificates').scrollIntoView({behavior:'smooth'});">Certificates</button>
+            <button class="nav-btn" onclick="document.getElementById('education').scrollIntoView({behavior:'smooth'});">Education</button>
+            <button class="nav-btn" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'});">Projects</button>
+            <button class="nav-btn" onclick="document.getElementById('experience').scrollIntoView({behavior:'smooth'});">Experience</button>
+            <button class="nav-btn" onclick="document.getElementById('leadership').scrollIntoView({behavior:'smooth'});">Leadership</button>
+        </div>
     </header>
-
-    <!-- About Me and Career Aspirations -->
-    <section id="about">
-        <h2>About Me & Career Aspirations</h2>
-        <p>
-            I am an enthusiastic IT and cybersecurity student with a passion for technology and problem-solving. My career goal is to launch my journey in the IT sector—fixing computers, printers, and resolving tech issues—before eventually moving into cybersecurity. For years, I’ve helped friends and family troubleshoot devices and build custom computers, which has given me hands-on experience and confidence in technical support.
-        </p>
-        <p>
-            I thrive on learning and am committed to staying up to date with the latest technology through continued education and certifications. I enjoy earning certificates because they showcase my progress and deepen my understanding of new technologies.
-        </p>
-        <p>
-            In my current role as a cashier at JCPenney, I’ve developed excellent customer service and communication skills, including experience in de-escalating situations and ensuring customers’ needs are met. I look forward to combining my technical skills and people skills to make a positive impact in IT and, eventually, the cybersecurity field.
-        </p>
-    </section>
-
     <main>
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li><strong>IT Support & Troubleshooting:</strong> Hardware/software diagnostics, POS system support, technical issue resolution, ticketing systems</li>
-                <li><strong>Operating Systems:</strong> Windows 10/Server, Linux (Ubuntu, Fedora), Active Directory basics</li>
-                <li><strong>Networking:</strong> IP addressing, ports and protocols, basic network security, DNS/DHCP understanding</li>
-                <li><strong>ITSM & Tools:</strong> ServiceNow (LinkedIn Learning), Microsoft Office, Google Workspace, Android Studio</li>
-                <li><strong>Programming & Automation:</strong> Java, Python, C++ for scripting and task automation</li>
-                <li><strong>Data Management:</strong> Accurate data entry, data validation, and clear documentation</li>
-                <li><strong>Languages:</strong> Fluent in English and Spanish</li>
-            </ul>
-        </section>
-
-        <section id="certificates">
-            <h2>Certificates</h2>
-            <div style="display:flex;align-items:center;gap:1.5rem;">
-                <!-- Replace with your CompTIA image file -->
-                <img src="images/comptia-a-plus.png" alt="CompTIA A+ Certification Logo" class="cert-img" width="80" style="border-radius:10px;">
-                <div>
-                    <h3>CompTIA A+ Certification <span style="font-weight:normal;">(Expected 2025)</span></h3>
-                    <ul>
-                        <li>Foundation knowledge of hardware, software, networking, and troubleshooting</li>
-                        <li>Installed and configured operating systems: Windows, Linux, and macOS</li>
-                        <li>Applied security best practices: device hardening, threat detection, and access controls</li>
-                        <li>Diagnosed and resolved technical issues in real-world scenarios</li>
-                    </ul>
-                </div>
+        <!-- About Me -->
+        <section id="about" class="section-row">
+            <div class="section-content">
+                <h2>About Me & Career Aspirations</h2>
+                <p>
+                    I am an enthusiastic IT and cybersecurity student passionate about technology and problem-solving. I aim to begin my career in IT support—fixing computers, printers, and tech issues—before transitioning into cybersecurity. Years of helping friends and family troubleshoot devices and build custom PCs have given me hands-on confidence and joy in technical support. I am committed to lifelong learning, earning certifications, and staying ahead in technology.
+                </p>
             </div>
-            <!-- To add more certificates, use a similar structure -->
-            <!--
-            <div style="display:flex;align-items:center;gap:1.5rem;margin-top:1.5rem;">
-                <img src="images/another-certificate.png" alt="Another Certificate Logo" width="80" style="border-radius:10px;">
-                <div>
-                    <h3>Certificate Title <span style="font-weight:normal;">(Year)</span></h3>
-                    <ul>
-                        <li>Certificate details...</li>
-                    </ul>
-                </div>
-            </div>
-            -->
-        </section>
-
-        <section id="education">
-            <h2>Education</h2>
-            <article>
-                <div style="display:flex;align-items:center;gap:1rem;">
-                    <img src="images/csulb-logo.png" alt="CSULB Logo" width="60" height="60" style="border-radius:10px;">
-                    <div>
-                        <h3>California State University, Long Beach</h3>
-                        <p>
-                            Bachelor of Science in Engineering; Computer Science<br>
-                            Minor: Cyber Security Applications<br>
-                            <em>Long Beach, CA | August 2021 - May 2025</em>
-                        </p>
-                    </div>
-                </div>
-            </article>
-            <article>
-                <div style="display:flex;align-items:center;gap:1rem;">
-                    <img src="images/lahc-logo.png" alt="Los Angeles Harbor College Logo" width="60" height="60" style="border-radius:10px;">
-                    <div>
-                        <h3>Los Angeles Harbor College</h3>
-                        <p>
-                            Associate of Science, Emphasis in Mathematics and Natural Sciences<br>
-                            Associate of Arts in Liberal Arts<br>
-                            <em>Wilmington, CA | August 2018 - May 2021</em>
-                        </p>
-                    </div>
-                </div>
-            </article>
-        </section>
-
-        <section id="projects">
-            <h2>Projects & Competitions</h2>
-
-            <div style="display:flex;align-items:flex-start;gap:1.5rem;margin-bottom:2.5rem;">
-                <!-- Example: Add a project image or relevant screenshot -->
-                <img src="images/forensics-project.jpg" alt="Hidden Image Project screenshot" width="90" height="90" style="border-radius:10px;object-fit:cover;">
-                <div>
-                    <h3>Digital Forensics Coursework – Hidden Image Project <span style="font-weight:normal;">(Spring 2024)</span></h3>
-                    <ul>
-                        <li>Conducted a forensic investigation on a simulated hard drive to uncover hidden images.</li>
-                        <li>Utilized tools like Autopsy to analyze file systems, metadata, and slack space.</li>
-                        <li>Practiced digital evidence handling and explored techniques in steganography detection and forensic analysis.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div style="display:flex;align-items:flex-start;gap:1.5rem;margin-bottom:2.5rem;">
-                <!-- Example: Add a competition logo or a team photo -->
-                <img src="images/ecitadel-logo.png" alt="eCitadel Competition Logo" width="90" height="90" style="border-radius:10px;object-fit:cover;">
-                <div>
-                    <h3>Cybersecurity eCitadel Competition <span style="font-weight:normal;">(2023)</span></h3>
-                    <ul>
-                        <li>Collaborated in a 2-person team to secure compromised virtual machines running Windows 10, Server 2022, Fedora, and Ubuntu.</li>
-                        <li>Tasks included malware removal, applying security configurations, managing user permissions, and hardening systems against threats.</li>
-                        <li>Gained hands-on experience in identifying vulnerabilities and improving system defenses under time constraints.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div style="display:flex;align-items:flex-start;gap:1.5rem;margin-bottom:2.5rem;">
-                <!-- Example: Add a screenshot of the PlayDay app or its logo -->
-                <img src="images/playday-app.png" alt="PlayDay Android App Screenshot" width="90" height="90" style="border-radius:10px;object-fit:cover;">
-                <div>
-                    <h3>Mobile App Development Project – PlayDay <span style="font-weight:normal;">(2022–2023)</span></h3>
-                    <ul>
-                        <li>Designed and built PlayDay, an Android app that promotes outdoor play between parents and children using geolocation-based “I Spy” gameplay.</li>
-                        <li>Included a safety radius feature to alert parents if a child strays too far.</li>
-                        <li>Used Android Studio, Firebase, and Google Maps API to create a responsive and engaging user experience.</li>
-                        <li>Worked as part of a 3-person development team.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div style="display:flex;align-items:flex-start;gap:1.5rem;">
-                <!-- Example: Add a CyberPatriot logo or event photo -->
-                <img src="images/cyberpatriot-logo.png" alt="CyberPatriot Logo" width="90" height="90" style="border-radius:10px;object-fit:cover;">
-                <div>
-                    <h3>CyberPatriot Competition – Platinum Tier <span style="font-weight:normal;">(2018)</span></h3>
-                    <ul>
-                        <li>Participated as a core team member in the national CyberPatriot cybersecurity competition.</li>
-                        <li>Tasked with securing enterprise environments using Windows 10, Windows Server 2019/2022, and Linux systems.</li>
-                        <li>Responsibilities included patch management, user access control, and system monitoring.</li>
-                        <li>Achieved Platinum Tier standing for outstanding performance.</li>
-                    </ul>
-                </div>
+            <div class="section-img-box">
+                <!-- Optional: Place a section image here or leave empty -->
             </div>
         </section>
 
-        <section id="experience">
-            <h2>Professional Experience</h2>
-            <article>
-                <div style="display:flex;align-items:center;gap:1rem;">
-                    <img src="images/jcpenney-logo.png" alt="JCPenney Logo" width="70" height="70" style="border-radius:10px;">
-                    <div>
-                        <h3>JCPenney – Cashier Associate</h3>
-                        <p><em>Carson, California | June 2024 - Present</em></p>
-                        <ul>
-                            <li>Provided daily front-line customer service in a high-traffic retail environment, interacting with hundreds of customers per shift and ensuring their needs were met efficiently and courteously.</li>
-                            <li>Developed strong troubleshooting skills by quickly adapting to technical issues at checkout terminals, such as printer jams, scanner malfunctions, and point-of-sale software errors, minimizing downtime and maintaining smooth store operations.</li>
-                            <li>Proactively identified opportunities to improve customer satisfaction, including assisting with price discrepancies, resolving complaints, and escalating complex issues to management when necessary.</li>
-                            <li>Managed cash, credit, and digital transactions with high accuracy, demonstrating attention to detail and accountability in all financial processes.</li>
-                            <li>Contributed to team goals by training new staff on system usage, store policies, and conflict de-escalation techniques, helping foster a supportive and collaborative work environment.</li>
-                            <li>Regularly supported back-end operations such as merchandise returns, re-ticketing, restocking, and store layout changes, providing flexibility and reliability across multiple roles.</li>
-                        </ul>
-                        <p style="font-size:0.95em;color:#555;margin-top:0.5em;">
-                            <strong>What I gained:</strong> Confidence in communicating with diverse customers, real-world experience problem-solving technical and customer issues, and a deeper understanding of retail technology systems.
-                        </p>
-                    </div>
-                </div>
-            </article>
+        <!-- Skills -->
+        <section id="skills" class="section-row">
+            <div class="section-content">
+                <h2>Skills</h2>
+                <ul>
+                    <li>IT Support & Troubleshooting: Hardware/software diagnostics, POS systems, technical issue resolution</li>
+                    <li>Operating Systems: Windows, Linux, Active Directory basics</li>
+                    <li>Networking: IP addressing, protocols, basic security</li>
+                    <li>Programming: Java, Python, C++</li>
+                    <li>ITSM Tools: ServiceNow, Office, Google Workspace</li>
+                    <li>Languages: English, Spanish</li>
+                </ul>
+            </div>
+            <div class="section-img-box"></div>
         </section>
 
-        <section id="leadership">
-            <h2>Leadership & Activities</h2>
-            <article>
-                <div style="display:flex;align-items:center;gap:1rem;">
-                    <img src="images/srla-photo.jpg" alt="Students Run LA Event Photo" width="70" height="70" style="border-radius:10px;object-fit:cover;">
-                    <div>
-                        <h3>Students Run LA (SRLA) – Leadership Volunteer/Runner</h3>
-                        <p><em>Carson High School | 2017–2018</em></p>
-                        <ul>
-                            <li>Assisted coach in organizing and leading marathon training sessions, helping team members prepare for long-distance events and build endurance.</li>
-                            <li>Coordinated running routes, managed logistics for group runs, and ensured the safety and accountability of all participants during practice.</li>
-                            <li>Provided ongoing peer support and motivation, encouraging teammates to overcome challenges and celebrate achievements together.</li>
-                            <li>Demonstrated leadership, responsibility, and effective communication in team settings, balancing encouragement with discipline to help the team reach its goals.</li>
-                            <li>Participated in community outreach events and represented the school at local races, fostering a sense of pride and camaraderie among participants.</li>
-                        </ul>
-                        <p style="font-size:0.95em;color:#555;margin-top:0.5em;">
-                            <strong>What I gained:</strong> Strong organizational and motivational skills, experience working with diverse groups, and the ability to lead by example.
-                        </p>
-                    </div>
-                </div>
-            </article>
+        <!-- Certificates -->
+        <section id="certificates" class="section-row">
+            <div class="section-content">
+                <h2>Certificates</h2>
+                <h3>CompTIA A+ (Expected 2025)</h3>
+                <ul>
+                    <li>Foundation in hardware, networking, OS, and troubleshooting</li>
+                    <li>Security best practices and real-world scenario problem-solving</li>
+                </ul>
+            </div>
+            <div class="section-img-box">
+                <img src="images/comptia-a-plus.png" alt="CompTIA A+ badge" class="section-img">
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education" class="section-row">
+            <div class="section-content">
+                <h2>Education</h2>
+                <h3>California State University, Long Beach</h3>
+                <p>B.S. in Engineering: Computer Science (Minor: Cyber Security Applications) | 2021–2025</p>
+                <h3>Los Angeles Harbor College</h3>
+                <p>A.S. in Math & Natural Sciences, A.A. in Liberal Arts | 2018–2021</p>
+            </div>
+            <div class="section-img-box">
+                <img src="images/csulb-logo.png" alt="CSU Long Beach logo" class="section-img">
+                <img src="images/lahc-logo.png" alt="Los Angeles Harbor College logo" class="section-img">
+            </div>
+        </section>
+
+        <!-- Projects & Competitions -->
+        <section id="projects" class="section-row">
+            <div class="section-content">
+                <h2>Projects & Competitions</h2>
+                <h3>Digital Forensics: Hidden Image Project (2024)</h3>
+                <ul>
+                    <li>Investigated a simulated hard drive to uncover hidden images using Autopsy</li>
+                    <li>Practiced digital evidence handling and steganography detection</li>
+                </ul>
+                <h3>PlayDay Android App (2022–2023)</h3>
+                <ul>
+                    <li>Co-developed a geolocation game app for parents and kids</li>
+                    <li>Implemented safety radius and Google Maps features</li>
+                </ul>
+            </div>
+            <div class="section-img-box">
+                <img src="images/forensics-project-banner.jpg" alt="Forensics Project Banner" class="banner-img">
+                <img src="images/playday-app-banner.png" alt="PlayDay App Banner" class="banner-img">
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="section-row">
+            <div class="section-content">
+                <h2>Professional Experience</h2>
+                <h3>JCPenney – Cashier Associate (2024–Present)</h3>
+                <ul>
+                    <li>Delivered customer service, resolved tech issues at POS terminals, and supported store operations</li>
+                    <li>Trained new staff and improved team workflow</li>
+                    <li>Gained confidence in troubleshooting, communication, and adaptability</li>
+                </ul>
+            </div>
+            <div class="section-img-box">
+                <img src="images/jcpenney-logo.png" alt="JCPenney logo" class="section-img">
+            </div>
+        </section>
+
+        <!-- Leadership & Activities -->
+        <section id="leadership" class="section-row">
+            <div class="section-content">
+                <h2>Leadership & Activities</h2>
+                <h3>Students Run LA – Volunteer/Runner</h3>
+                <ul>
+                    <li>Organized and led marathon practices, ensured team safety, and motivated participants</li>
+                    <li>Developed leadership, communication, and event coordination skills</li>
+                </ul>
+            </div>
+            <div class="section-img-box">
+                <img src="images/srla-photo.jpg" alt="SRLA Event Photo" class="banner-img">
+            </div>
         </section>
     </main>
-
     <footer>
         <p>&copy; 2025 Jsy Jared Corado</p>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
