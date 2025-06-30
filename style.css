@@ -1,44 +1,40 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 html, body {
     min-height: 100%;
     font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-    background: #f7f8fa;
+    background: #eef1f5;
     color: #232c3d;
+    font-size: 1.18rem;
+    scroll-behavior: smooth;
 }
 
 header {
     text-align: center;
-    padding: 2.4rem 1rem 1.2rem 1rem;
+    padding: 3rem 1rem 2rem 1rem;
     background: #fff;
     box-shadow: 0 4px 24px rgba(44, 62, 80, 0.07);
-    border-radius: 0 0 24px 24px;
-    margin-bottom: 1.3rem;
+    border-radius: 0 0 28px 28px;
+    margin-bottom: 2.2rem;
 }
 
 header .profile-img {
-    box-shadow: 0 2px 14px rgba(45, 84, 136, 0.13);
-    border: 4px solid #e7e8ea;
-    margin-bottom: 1rem;
+    box-shadow: 0 3px 20px rgba(45, 84, 136, 0.13);
+    border: 5px solid #e7e8ea;
+    margin-bottom: 1.2rem;
     object-fit: cover;
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
 }
 
 header h1 {
     color: #173168;
-    font-size: 2.1rem;
-    margin-bottom: 0.2em;
+    font-size: 2.5rem;
+    margin-bottom: 0.4em;
 }
 
 header p {
-    font-size: 1.08rem;
-    margin-bottom: 1.1em;
+    font-size: 1.2rem;
+    margin-bottom: 1.3em;
 }
 
 header a {
@@ -58,18 +54,18 @@ header a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.6em;
-    margin: 0.8em 0 0 0;
+    gap: 0.8em;
+    margin: 1em 0 0 0;
 }
 .nav-link {
     display: inline-block;
-    padding: 0.5em 1.2em;
+    padding: 0.7em 1.5em;
     background: #e7e8ea;
     color: #173168;
-    border-radius: 8px;
+    border-radius: 10px;
     font-weight: 500;
     text-decoration: none;
-    font-size: 1.02em;
+    font-size: 1.22em;
     letter-spacing: 0.3px;
     box-shadow: 0 1px 4px #c2c9d6a5;
     border: 1px solid #d3d7e1;
@@ -84,18 +80,20 @@ header a:hover {
 
 /* Main Container */
 main {
-    max-width: 950px;
+    max-width: 1100px;
     margin: 0 auto;
     padding-bottom: 2.5rem;
+    font-size: 1.15em;
 }
 
 /* Section Row Layout */
 .section-row {
     background: #fff;
-    border-radius: 14px;
-    box-shadow: 0 1.5px 12px 0 rgba(44, 62, 80, 0.10);
-    margin-bottom: 1.7rem;
-    padding: 1.7rem 2.1rem 1.5rem 2.1rem;
+    border-radius: 18px;
+    box-shadow: 0 2px 24px 0 rgba(44, 62, 80, 0.13);
+    border: 1px solid #e2e6ea;
+    margin-bottom: 2.3rem;
+    padding: 2.3rem 2.7rem 2.1rem 2.7rem;
     position: relative;
 }
 
@@ -103,7 +101,7 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 0.7em;
+    gap: 1.1em;
 }
 
 /* Item row for name/text + image left (default) */
@@ -111,8 +109,8 @@ main {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 2.2rem;
-    margin-bottom: 1.6rem;
+    gap: 2.7rem;
+    margin-bottom: 2.1rem;
 }
 .item-row:last-child {
     margin-bottom: 0;
@@ -137,47 +135,52 @@ main {
 }
 
 .item-text {
-    flex: 3 1 300px;
-    min-width: 180px;
+    flex: 3 1 350px;
+    min-width: 220px;
 }
 
 /* Adaptable images */
 .adapt-img {
     background: #f6f7fa;
-    border: 2px solid #e7e8ea;
-    box-shadow: 0 2px 12px #c2c9d6a5;
+    border: 3px solid #e7e8ea;
+    box-shadow: 0 2px 16px #c2c9d6a5;
     object-fit: cover;
     margin-left: 0;
     margin-right: 0;
-    max-width: 180px;
-    max-height: 110px;
-    min-width: 70px;
-    min-height: 70px;
+    max-width: 260px;
+    max-height: 150px;
+    min-width: 90px;
+    min-height: 90px;
 }
 
 .square-img {
-    width: 90px;
-    height: 90px;
-    border-radius: 12px;
+    width: 130px;
+    height: 130px;
+    border-radius: 16px;
 }
 
 .banner-img {
-    width: 170px;
-    height: 60px;
-    border-radius: 10px;
+    width: 250px;
+    height: 90px;
+    border-radius: 12px;
     object-fit: cover;
 }
 
 /* Responsive adaptation */
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
     main {
         padding: 0 0.6rem;
     }
+    .section-row {
+        padding: 1.3rem 1.1rem 1rem 1.1rem;
+    }
+}
+@media (max-width: 900px) {
     .item-row,
     .reverse-row {
         flex-direction: column !important;
         align-items: flex-start;
-        gap: 0.9rem;
+        gap: 1.2rem;
     }
     .adapt-img {
         margin-left: 0;
@@ -188,12 +191,23 @@ main {
     .banner-img {
         width: 98vw;
         max-width: 350px;
-        height: 80px;
+        height: 90px;
     }
     .square-img {
         width: 100px;
         height: 100px;
     }
+    header .profile-img {
+        width: 90px;
+        height: 90px;
+    }
+}
+@media (max-width: 600px) {
+    header h1 { font-size: 1.55rem; }
+    .section-row {
+        padding: 0.7rem 0.2rem 0.5rem 0.2rem;
+    }
+    .square-img, .banner-img { width: 90vw !important; max-width: 240px; }
 }
 
 h1, h2 {
@@ -201,44 +215,45 @@ h1, h2 {
     margin-bottom: 0.5em;
 }
 h2 {
-    border-left: 4px solid #6689b4;
-    padding-left: 0.5em;
-    font-size: 1.19rem;
+    border-left: 5px solid #6689b4;
+    padding-left: 0.7em;
+    font-size: 1.55rem;
     letter-spacing: 0.2px;
-    margin-bottom: 0.7em;
+    margin-bottom: 1.1em;
 }
 h3 {
     color: #254b83;
-    margin-bottom: 0.18em;
-    margin-top: 0.6em;
-    font-size: 1.07em;
-    font-weight: 600;
+    margin-bottom: 0.23em;
+    margin-top: 0.8em;
+    font-size: 1.22em;
+    font-weight: 700;
 }
 .item-text h3 {
     margin-top: 0.1em;
 }
 
 ul {
-    margin: 0.6em 0 0.6em 1.2em;
+    margin: 0.7em 0 0.7em 1.5em;
     padding-left: 0.7em;
-    line-height: 1.7;
+    line-height: 1.85;
 }
 li {
-    margin-bottom: 0.26em;
+    margin-bottom: 0.32em;
+    font-size: 1.08em;
 }
 .item-date {
     color: #6689b4;
     font-weight: 400;
-    font-size: 0.95em;
-    margin-left: 0.5em;
+    font-size: 0.98em;
+    margin-left: 0.6em;
 }
 
 footer {
     text-align: center;
     color: #8ba1b3;
     background: transparent;
-    margin-top: 2rem;
-    font-size: 1.02rem;
+    margin-top: 2.5rem;
+    font-size: 1.18rem;
     letter-spacing: 1px;
     padding-bottom: 1.5rem;
 }
@@ -252,19 +267,19 @@ section:target {
 #scrollTopBtn {
     display: none;
     position: fixed;
-    bottom: 32px;
-    right: 32px;
+    bottom: 38px;
+    right: 38px;
     z-index: 99;
     border: none;
     outline: none;
     background: #173168;
     color: #fff;
     cursor: pointer;
-    padding: 0.72em 1.1em;
+    padding: 1em 1.3em;
     border-radius: 50%;
-    font-size: 1.6em;
-    box-shadow: 0 2px 12px #c2c9d6a5;
-    opacity: 0.9;
+    font-size: 2em;
+    box-shadow: 0 2px 16px #c2c9d6a5;
+    opacity: 0.93;
     transition: background 0.18s, opacity 0.18s;
 }
 #scrollTopBtn:hover {
