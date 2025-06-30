@@ -1,15 +1,19 @@
-// Smooth scrolling for all internal anchor links
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-      // Check if the target exists
-      const target = document.querySelector(this.getAttribute("href"));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({
-          behavior: "smooth"
-        });
-      }
+// Scroll-to-top button logic
+document.addEventListener("DOMContentLoaded", function() {
+    const scrollBtn = document.getElementById('scrollTopBtn');
+    if (!scrollBtn) return;
+
+    // Show or hide the button on scroll
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 120) {
+            scrollBtn.style.display = "block";
+        } else {
+            scrollBtn.style.display = "none";
+        }
     });
-  });
+
+    // Smooth scroll to top on button click
+    scrollBtn.addEventListener('click', function() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    });
 });
