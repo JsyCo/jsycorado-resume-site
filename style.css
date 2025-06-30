@@ -11,7 +11,6 @@ html, body {
     color: #232c3d;
 }
 
-/* Header */
 header {
     text-align: center;
     padding: 2.4rem 1rem 1.2rem 1rem;
@@ -107,16 +106,34 @@ main {
     gap: 0.7em;
 }
 
-/* Item row for name/text + image right */
+/* Item row for name/text + image left (default) */
 .item-row {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 2.2rem;
     margin-bottom: 1.6rem;
 }
 .item-row:last-child {
     margin-bottom: 0;
+}
+.item-row > img {
+    order: 0;
+}
+.item-row .item-text {
+    order: 1;
+}
+
+/* Reverse row for Projects & Competitions: image right */
+.reverse-row {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+.reverse-row > img {
+    order: 1;
+}
+.reverse-row .item-text {
+    order: 0;
 }
 
 .item-text {
@@ -130,7 +147,8 @@ main {
     border: 2px solid #e7e8ea;
     box-shadow: 0 2px 12px #c2c9d6a5;
     object-fit: cover;
-    margin-left: 1.2em;
+    margin-left: 0;
+    margin-right: 0;
     max-width: 180px;
     max-height: 110px;
     min-width: 70px;
@@ -155,13 +173,15 @@ main {
     main {
         padding: 0 0.6rem;
     }
-    .item-row {
-        flex-direction: column;
+    .item-row,
+    .reverse-row {
+        flex-direction: column !important;
         align-items: flex-start;
         gap: 0.9rem;
     }
     .adapt-img {
         margin-left: 0;
+        margin-right: 0;
         margin-top: 0.5em;
         max-width: 98vw;
     }
@@ -176,7 +196,6 @@ main {
     }
 }
 
-/* Section Titles */
 h1, h2 {
     color: #173168;
     margin-bottom: 0.5em;
