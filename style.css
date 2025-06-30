@@ -7,10 +7,85 @@ html, body {
     scroll-behavior: smooth;
 }
 
+header {
+    text-align: center;
+    padding: 3rem 1rem 2rem 1rem;
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.07);
+    border-radius: 0 0 28px 28px;
+    margin-bottom: 2.2rem;
+}
+
+header .profile-img {
+    box-shadow: 0 3px 20px rgba(45, 84, 136, 0.13);
+    border: 5px solid #e7e8ea;
+    margin-bottom: 1.2rem;
+    object-fit: cover;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header h1 {
+    color: #173168;
+    font-size: 2.5rem;
+    margin-bottom: 0.4em;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 1.3em;
+}
+
+header a {
+    color: #336699;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid #33669922;
+    transition: color 0.2s, border 0.2s;
+}
+header a:hover {
+    color: #16335b;
+    border-bottom: 2px solid #173168cc;
+}
+
+/* Nav block links */
+.section-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8em;
+    margin: 1em 0 0 0;
+}
+.nav-link {
+    display: inline-block;
+    padding: 0.7em 1.5em;
+    background: #e7e8ea;
+    color: #173168;
+    border-radius: 10px;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1.22em;
+    letter-spacing: 0.3px;
+    box-shadow: 0 1px 4px #c2c9d6a5;
+    border: 1px solid #d3d7e1;
+    transition: background 0.18s, color 0.18s, box-shadow 0.2s;
+}
+.nav-link:hover, .nav-link:focus {
+    background: #c7d0db;
+    color: #336699;
+    box-shadow: 0 4px 16px #c2c9d6c7;
+    text-decoration: none;
+}
+
 main {
-    max-width: 1400px;    /* Was 1100px */
-    width: 90vw;
+    max-width: 1600px; /* Use more horizontal space */
     margin: 0 auto;
+    padding-left: 4vw;
+    padding-right: 4vw;
     padding-bottom: 2.5rem;
     font-size: 1.16em;
 }
@@ -23,6 +98,8 @@ main {
     margin-bottom: 2.3rem;
     padding: 2.3rem 2.7rem 2.1rem 2.7rem;
     position: relative;
+    padding-left: 4vw;
+    padding-right: 4vw;
 }
 
 .section-content {
@@ -32,67 +109,62 @@ main {
     gap: 1.1em;
 }
 
+/* Uniform item row: grid with fixed image column and flexible content column */
 .item-row {
     display: grid;
-    grid-template-columns: 180px 1fr; /* Slimmer image block */
+    grid-template-columns: 220px 1fr;
     align-items: center;
     gap: 2rem;
     margin-bottom: 2rem;
     width: 100%;
-    min-height: 140px;
+    min-height: 160px;
 }
-
 .reverse-row {
-    grid-template-columns: 1fr 220px; /* Banner blocks a bit wider */
+    grid-template-columns: 1fr 280px;
 }
-
 .reverse-row .item-text { grid-column: 1; }
 .reverse-row .image-block,
 .reverse-row .banner-block { grid-column: 2; }
 
 .image-block, .banner-block {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background: #f6f7fa;
-    border-radius: 12px;
-    box-shadow: 0 1px 6px #c2c9d6a5;
-    border: 1px solid #e0e3e8; /* slimmer border */
-    margin: 0 auto;
-    overflow: hidden;
+    justify-content: flex-start;
+    background: #f3f4f7;
+    border-radius: 15px;
+    box-shadow: 0 1px 10px #c2c9d6a5;
+    border: 1px solid #e2e6ea; /* Slimmer border */
+    margin: 1.5em 2em 1.5em 0; /* Add more right and vertical margin */
+    overflow: hidden; /* Prevent content spill */
+    min-width: 180px;
+    min-height: 120px;
 }
 
-.image-block {
-    width: 110px;   /* Slimmer for square logos */
-    height: 110px;
-    min-width: 110px;
-    min-height: 110px;
+/* Ensure text does not wrap around image-block or banner-block */
+.image-block, .banner-block {
+    float: none;
+    clear: both;
 }
 
-.banner-block {
-    width: 190px;   /* Banner: wider, but less tall */
-    height: 70px;
-    min-width: 190px;
-    min-height: 70px;
-    background: #f6f7fa;
+.item-row, .reverse-row {
+    align-items: flex-start;
 }
 
 .square-img {
-    width: 90%;
-    height: 90%;
-    object-fit: contain;  /* So logos never crop */
-    background: #fff;
-    border-radius: 9px;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
     display: block;
+    margin: 0 auto;
+    background: #fff;
 }
-
 .banner-img {
-    width: 90%;
-    height: 90%;
-    object-fit: contain;  /* So banners/logos never crop */
-    background: #fff;
-    border-radius: 7px;
-    display: block;
+    width: 220px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .item-text {
@@ -130,53 +202,167 @@ h2 {
     margin-top: 0;
 }
 
-/* Responsive: for tablets and mobile */
+/* Modern, semantic image block styling */
+.figure-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+    border-radius: 15px;
+    box-shadow: none;
+    border: none;
+    margin: 1.5em 2em 1.5em 0;
+    overflow: hidden;
+    min-width: 180px;
+    min-height: 120px;
+    padding: 0;
+    max-width: 350px;
+}
+.figure-block img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    margin-bottom: 0;
+    border: none;
+    box-shadow: none;
+}
+
+/* Profile image, education, and work images keep their style */
+header .profile-img {
+    box-shadow: 0 3px 20px rgba(45, 84, 136, 0.13);
+    border: 5px solid #e7e8ea;
+    margin-bottom: 1.2rem;
+    object-fit: cover;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Remove border/box for all other images */
+.image-block,
+.image-block img,
+.square-img,
+.banner-img,
+img:not(.profile-img) {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.banner-block,
+.banner-block img,
+.banner-img {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.verify-btn {
+    display: block;
+    margin: 12px auto 0 auto;
+    padding: 6px 18px;
+    background: #0073e6;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    cursor: pointer;
+}
+.verify-btn:hover, .verify-btn:focus {
+    background: #005bb5;
+    color: #fff;
+    text-decoration: none;
+}
+
+.edu-minor {
+    font-weight: 500;
+    color: #0073e6;
+    margin-left: 6px;
+}
+
+.section-content .item-text p strong {
+    font-size: 1.08em;
+    color: #222;
+    letter-spacing: 0.01em;
+}
+
 @media (max-width: 1000px) {
-    main { max-width: 99vw; }
-    .section-row { padding: 1.3rem 0.7rem 1rem 0.7rem; }
-    .item-row, .reverse-row {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
-        gap: 1rem;
-        min-height: unset;
+    main {
+        padding-left: 1vw;
+        padding-right: 1vw;
     }
-    .image-block, .banner-block {
-        margin-bottom: 0.6rem;
-        margin-top: 0.5em;
-        margin-left: 0;
-        margin-right: 0;
-        width: 55vw;
-        max-width: 240px;
-        height: 100px;
-        max-height: 120px;
+    .section-row {
+        padding-left: 1vw;
+        padding-right: 1vw;
     }
-    .banner-block { width: 70vw; max-width: 320px; height: 70px; }
-    .square-img, .banner-img { width: 95%; height: 95%; }
-    header .profile-img { width: 70px; height: 70px; }
+    .square-img {
+        width: 120px;
+        height: 120px;
+    }
+    .banner-block { width: 98vw; max-width: 350px; height: 90px; }
+    .square-img, .banner-img { width: 100%; height: 90%; }
+    header .profile-img {
+        width: 90px;
+        height: 90px;
+    }
 }
 
 @media (max-width: 600px) {
     header h1 { font-size: 1.25rem; }
-    .section-row { padding: 0.7rem 0.1rem 0.5rem 0.1rem; }
-    .image-block, .banner-block { width: 80vw !important; max-width: 140px; }
+    .section-row {
+        padding: 0.7rem 0.2rem 0.5rem 0.2rem;
+    }
+    .image-block, .banner-block { width: 80vw !important; max-width: 160px; }
     .banner-block { max-width: 210px; }
+}
+
+footer {
+    text-align: center;
+    color: #8ba1b3;
+    background: transparent;
+    margin-top: 2.5rem;
+    font-size: 1.18rem;
+    letter-spacing: 1px;
+    padding-bottom: 1.5rem;
+}
+
+section:target {
+    box-shadow: 0 8px 26px 0 #c2c9d6c4;
+    z-index: 2;
 }
 
 /* Scroll to top button - block style, light grey */
 #scrollTopBtn {
     display: none;
     position: fixed;
-    bottom: 38px;
-    right: 38px;
+    bottom: 30px;
+    right: 30px;
     z-index: 99;
     border: none;
     outline: none;
     background: #e2e6ea;
     color: #232c3d;
     cursor: pointer;
-    padding: 0.6em 2em;
-    border-radius: 10px;
-    font-size: 2em;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    border-radius: 6px;
+    font-size: 2rem;
     box-shadow: 0 1px 8px #c2c9d6a5;
     opacity: 0.93;
     transition: background 0.18s, opacity 0.18s;
@@ -186,4 +372,40 @@ h2 {
 #scrollTopBtn:hover {
     background: #d1d6dc;
     opacity: 1;
+}
+
+/* Make all images responsive and prevent text wrapping around them */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.2em auto;
+    /* Prevent text from wrapping around images */
+    float: none;
+    clear: both;
+}
+
+/* Ensure text remains uniform and not affected by images */
+p, li, h1, h2, h3, h4, h5, h6 {
+    word-break: break-word;
+    line-height: 1.6;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Optional: add spacing between images and text */
+img + p, p + img {
+    margin-top: 1em;
+}
+
+@media (max-width: 1400px) {
+    main {
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+    .section-row {
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
 }
