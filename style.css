@@ -3,27 +3,27 @@ html, body {
     font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
     background: #eef1f5;
     color: #232c3d;
-    font-size: 1.18rem;
+    font-size: 1rem;
     scroll-behavior: smooth;
 }
 
 header {
     text-align: center;
-    padding: 3rem 1rem 2rem 1rem;
+    padding: 2rem 1rem 1rem 1rem;
     background: #fff;
     box-shadow: 0 4px 24px rgba(44, 62, 80, 0.07);
     border-radius: 0 0 28px 28px;
-    margin-bottom: 2.2rem;
+    margin-bottom: 1.2rem;
 }
 
 header .profile-img {
     box-shadow: 0 3px 20px rgba(45, 84, 136, 0.13);
-    border: 5px solid #e7e8ea;
-    margin-bottom: 1.2rem;
+    border: 3px solid #e7e8ea;
+    margin-bottom: 0.7rem;
     object-fit: cover;
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 70px;
+    height: 70px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -31,12 +31,12 @@ header .profile-img {
 
 header h1 {
     color: #173168;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 0.4em;
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 1.3em;
 }
 
@@ -82,45 +82,40 @@ header a:hover {
 }
 
 main {
-    max-width: 1600px; /* Use more horizontal space */
+    max-width: 1100px;
     margin: 0 auto;
-    padding-left: 4vw;
-    padding-right: 4vw;
-    padding-bottom: 2.5rem;
-    font-size: 1.16em;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-bottom: 1.2rem;
+    font-size: 1em;
 }
 
 .section-row {
-    background: #fff;
-    border-radius: 18px;
-    box-shadow: 0 2px 24px 0 rgba(44, 62, 80, 0.13);
+    border-radius: 12px;
+    box-shadow: 0 1px 10px 0 rgba(44, 62, 80, 0.10);
     border: 1px solid #e2e6ea;
-    margin-bottom: 2.3rem;
-    padding: 2.3rem 2.7rem 2.1rem 2.7rem;
+    margin-bottom: 1.2rem;
+    padding: 1.2rem 1.2rem 1rem 1.2rem;
     position: relative;
-    padding-left: 4vw;
-    padding-right: 4vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
 }
 
 .section-content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1.1em;
+    gap: 0.7em;
 }
 
-/* Uniform item row: grid with fixed image column and flexible content column */
 .item-row {
     display: grid;
-    grid-template-columns: 220px 1fr;
+    grid-template-columns: 120px 1fr;
     align-items: center;
-    gap: 2rem;
-    margin-bottom: 2rem;
+    gap: 1.1rem;
+    margin-bottom: 1.1rem;
     width: 100%;
-    min-height: 160px;
+    min-height: 90px;
 }
 .reverse-row {
-    grid-template-columns: 1fr 280px;
+    grid-template-columns: 1fr 140px;
 }
 .reverse-row .item-text { grid-column: 1; }
 .reverse-row .image-block,
@@ -132,13 +127,13 @@ main {
     align-items: center;
     justify-content: flex-start;
     background: #f3f4f7;
-    border-radius: 15px;
-    box-shadow: 0 1px 10px #c2c9d6a5;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px #c2c9d6a5;
     border: 1px solid #e2e6ea; /* Slimmer border */
-    margin: 1.5em 2em 1.5em 0; /* Add more right and vertical margin */
+    margin: 0.7em 1em 0.7em 0; /* Add more right and vertical margin */
     overflow: hidden; /* Prevent content spill */
-    min-width: 180px;
-    min-height: 120px;
+    min-width: 90px;
+    min-height: 60px;
 }
 
 /* Ensure text does not wrap around image-block or banner-block */
@@ -152,19 +147,17 @@ main {
 }
 
 .square-img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 12px;
+    width: 90px;
+    height: 90px;
+    border-radius: 8px;
     display: block;
     margin: 0 auto;
     background: #fff;
 }
 .banner-img {
-    width: 220px;
-    height: 90px;
-    object-fit: cover;
-    border-radius: 10px;
+    width: 120px;
+    height: 45px;
+    border-radius: 6px;
 }
 
 .item-text {
@@ -172,10 +165,10 @@ main {
 }
 .item-text h3 {
     margin-top: 0;
-    font-size: 1.21em;
+    font-size: 1em;
     color: #254b83;
     font-weight: 700;
-    margin-bottom: 0.32em;
+    margin-bottom: 0.18em;
 }
 ul, li {
     margin: 0;
@@ -194,11 +187,10 @@ ul, li {
     margin-left: 0.6em;
 }
 h2 {
-    border-left: 5px solid #6689b4;
-    padding-left: 0.7em;
-    font-size: 1.55rem;
-    letter-spacing: 0.2px;
-    margin-bottom: 1.1em;
+    font-size: 1.1rem;
+    border-left-width: 3px;
+    padding-left: 0.4em;
+    margin-bottom: 0.7em;
     margin-top: 0;
 }
 
@@ -231,12 +223,12 @@ h2 {
 /* Profile image, education, and work images keep their style */
 header .profile-img {
     box-shadow: 0 3px 20px rgba(45, 84, 136, 0.13);
-    border: 5px solid #e7e8ea;
-    margin-bottom: 1.2rem;
+    border: 3px solid #e7e8ea;
+    margin-bottom: 0.7rem;
     object-fit: cover;
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 70px;
+    height: 70px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -335,10 +327,10 @@ footer {
     text-align: center;
     color: #8ba1b3;
     background: transparent;
-    margin-top: 2.5rem;
-    font-size: 1.18rem;
+    margin-top: 1.2rem;
+    font-size: 0.95rem;
     letter-spacing: 1px;
-    padding-bottom: 1.5rem;
+    padding-bottom: 0.7rem;
 }
 
 section:target {
@@ -358,11 +350,11 @@ section:target {
     background: #e2e6ea;
     color: #232c3d;
     cursor: pointer;
-    width: 60px;
-    height: 60px;
+    width: 38px;
+    height: 38px;
     padding: 0;
-    border-radius: 6px;
-    font-size: 2rem;
+    border-radius: 4px;
+    font-size: 1.2rem;
     box-shadow: 0 1px 8px #c2c9d6a5;
     opacity: 0.93;
     transition: background 0.18s, opacity 0.18s;
