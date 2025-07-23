@@ -314,81 +314,99 @@ img:not(.profile-img) {
     }
 }
 
-@media (max-width: 600px) {
-    header h1 { font-size: 1.25rem; }
-    .section-row {
-        padding: 0.7rem 0.2rem 0.5rem 0.2rem;
+@media (max-width: 900px) {
+    main {
+        max-width: 98vw;
+        padding-left: 0.5vw;
+        padding-right: 0.5vw;
     }
-    .image-block, .banner-block { width: 80vw !important; max-width: 160px; }
-    .banner-block { max-width: 210px; }
+    .section-row {
+        padding: 1rem 0.5rem 0.8rem 0.5rem;
+    }
+    .item-row, .reverse-row {
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+        min-height: unset;
+    }
+    .image-block, .banner-block {
+        margin: 0.5em auto 0.5em auto;
+        min-width: 80px;
+        min-height: 60px;
+        max-width: 180px;
+    }
+    .square-img, .banner-img {
+        width: 90px !important;
+        height: 90px !important;
+        margin: 0 auto;
+    }
+    header .profile-img {
+        width: 70px;
+        height: 70px;
+    }
+    h2 {
+        font-size: 1.1rem;
+        padding-left: 0.4em;
+    }
+    .item-text h3 {
+        font-size: 1em;
+    }
+    .section-nav {
+        flex-wrap: wrap;
+        gap: 0.4em;
+        font-size: 1em;
+    }
+    .nav-link {
+        padding: 0.5em 1em;
+        font-size: 1em;
+    }
+    footer {
+        font-size: 0.9rem;
+        padding-bottom: 0.5rem;
+    }
 }
 
-footer {
-    text-align: center;
-    color: #8ba1b3;
-    background: transparent;
-    margin-top: 1.2rem;
-    font-size: 0.95rem;
-    letter-spacing: 1px;
-    padding-bottom: 0.7rem;
-}
-
-section:target {
-    box-shadow: 0 8px 26px 0 #c2c9d6c4;
-    z-index: 2;
-}
-
-/* Scroll to top button - block style, light grey */
-#scrollTopBtn {
-    display: none;
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 99;
-    border: none;
-    outline: none;
-    background: #e2e6ea;
-    color: #232c3d;
-    cursor: pointer;
-    width: 38px;
-    height: 38px;
-    padding: 0;
-    border-radius: 4px;
-    font-size: 1.2rem;
-    box-shadow: 0 1px 8px #c2c9d6a5;
-    opacity: 0.93;
-    transition: background 0.18s, opacity 0.18s;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-#scrollTopBtn:hover {
-    background: #d1d6dc;
-    opacity: 1;
-}
-
-/* Make all images responsive and prevent text wrapping around them */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 1.2em auto;
-    /* Prevent text from wrapping around images */
-    float: none;
-    clear: both;
-}
-
-/* Ensure text remains uniform and not affected by images */
-p, li, h1, h2, h3, h4, h5, h6 {
-    word-break: break-word;
-    line-height: 1.6;
-    color: inherit;
-    font-family: inherit;
-    font-size: inherit;
-}
-
-/* Optional: add spacing between images and text */
-img + p, p + img {
-    margin-top: 1em;
+@media (max-width: 600px) {
+    header {
+        padding: 1.2rem 0.2rem 1rem 0.2rem;
+    }
+    header h1 {
+        font-size: 1.1rem;
+    }
+    .section-row {
+        padding: 0.5rem 0.1rem 0.3rem 0.1rem;
+        border-radius: 8px;
+    }
+    .image-block, .banner-block {
+        width: 90vw !important;
+        max-width: 120px;
+    }
+    .square-img, .banner-img {
+        width: 70px !important;
+        height: 70px !important;
+    }
+    .item-text h3 {
+        font-size: 0.95em;
+    }
+    h2 {
+        font-size: 1em;
+        border-left-width: 2px;
+        padding-left: 0.3em;
+    }
+    .section-content {
+        gap: 0.5em;
+    }
+    .nav-link {
+        padding: 0.4em 0.7em;
+        font-size: 0.95em;
+    }
+    ul, li {
+        font-size: 0.95em;
+    }
+    #scrollTopBtn {
+        width: 32px;
+        height: 32px;
+        font-size: 1em;
+    }
 }
 
 @media (max-width: 1400px) {
