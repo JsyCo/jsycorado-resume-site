@@ -293,6 +293,29 @@ img:not(.profile-img) {
     letter-spacing: 0.01em;
 }
 
+#scrollTopBtn {
+    position: fixed;
+    right: 32px;
+    bottom: 32px;
+    z-index: 1000;
+    width: 48px;
+    height: 48px;
+    background: #173168;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.18);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+#scrollTopBtn:hover, #scrollTopBtn:focus {
+    background: #336699;
+    box-shadow: 0 4px 16px rgba(44,62,80,0.22);
+}
+
 @media (max-width: 1000px) {
     main {
         padding-left: 1vw;
